@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<f:metadata>
+	<f:viewAction action="#{employeMB.initDataTable}" />
+</f:metadata>
+
+<h:body>
+<h1>Employe List</h1>
+
+	<h:dataTable value="#{employeMB.listeEmployes}" var="emp">
+		<h:column>
+			<!-- column header -->
+			<f:facet name="header">ID</f:facet>
+			<!-- row record -->
+			<h:outputText value="#{emp.id}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Name</f:facet>
+			<h:outputText value="#{emp.name}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">Skill</f:facet>
+			<h:outputText value="#{emp.skill}" />
+		</h:column>
+		<h:column>
+			<f:facet name="header">Project</f:facet>
+			<h:outputText value="#{emp.project}" />
+		</h:column>
+
+		<h:column headerText="Actions" style="text-align: center">
+			<h:button value="remove" outcome="supprimer">
+				<f:param name="id" value="#{emp.id}" />
+			</h:button>
+		</h:column>
+
+		
+
+	</h:dataTable>
+
+</h:body>
+
+
+</html>

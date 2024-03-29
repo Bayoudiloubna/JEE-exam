@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<f:metadata>
+	<f:viewAction action="#{emplyeMB.initDataTable}" />
+</f:metadata>
+
+<h:body>
+	<h3>Employe Affectation</h3>
+	<h:form>
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputLabel for=" Employe name" value="Name :" />
+			<h:inputText id="name" value="#{employeMB.employe.name}"></h:inputText>
+
+			<h:outputLabel for="Project Name" value=" Project:" />
+			<h:inputText id="" value="#{employeMB.employe.Project Name}"></h:inputText>
+
+			<h:commandButton value="Affecter projet" action="#{employeMB.add}"></h:commandButton>
+
+		</h:panelGrid>
+	</h:form>
+
+	
+	</h:dataTable>
+
+</h:body>
+
+
+</html>
+
+

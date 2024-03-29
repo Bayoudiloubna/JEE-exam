@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      >
+  <f:metadata>
+	<f:viewAction action="#{employeMB.initForm}" />
+</f:metadata>    
+
+
+<h:body>
+	<h3>Suppression des employees</h3>
+	
+	<h:form>
+	<h:panelGrid columns="2" cellpadding="5">
+	    <h:outputLabel for="id" value="id :" />
+		<h:inputText id="id" value="#{employeMB.selectedEmploye.id}"></h:inputText>
+	
+	    <h:outputLabel for="Employe name" value="Name:" />
+		<h:inputText id="nom" value="#{empliyeMB.selectedEmplye.nom}"></h:inputText>
+		 
+		<h:outputLabel for="email" value="Vemail:" />
+		<h:inputText id="email" value="#{emplyeMB.selectedEmplye.email}"></h:inputText>
+		
+		<h:commandButton value="remove" action="#{emplyeMB.supprimer}"></h:commandButton>
+		<h:button value="Annuler" outcome="Employe List" > </h:button>
+	    
+	</h:panelGrid>
+	</h:form>
+   
+</h:body>
+
+
+</html>
+
+
